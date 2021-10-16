@@ -47,6 +47,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // https://google-analytics.nuxtjs.org/setup
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,6 +59,12 @@ export default {
   ],
   content: {
     nestedProperties: ['author.name'],
+  },
+// googleAnalytics config
+  googleAnalytics: {
+    id: 'UA-185378495-1',
+    layer: 'dataLayer',
+    pageTracking: true
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
