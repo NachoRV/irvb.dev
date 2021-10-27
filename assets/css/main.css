@@ -1,0 +1,15 @@
+:root {
+  --background-primary: #F7F9FB;
+  --primary-font: #191516;
+  --blue: #03f7eb;
+  --green: #00b295;
+  --black: #191516;
+  --purple: #ab2346;
+  --white: #f1f1f1;
+  --grey: rgb(214, 214, 214);
+}
+
+body {
+  font-family: monospace; 
+  background-color: var(--background-primary);
+}

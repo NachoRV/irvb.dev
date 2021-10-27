@@ -1,0 +1,102 @@
+<template>
+  <div class="wrapper">
+    <div>
+      <NuxtLink :to="'/'">
+        <div>
+          <h1>IRVB<span>&#160;</span></h1>
+        </div>
+      </NuxtLink>
+      <div>
+        <img v-if="show" src="~assets/svg/menu.svg" alt="menu" @click="open" />
+        <img v-else src="~assets/svg/close.svg" alt="menu" @click="open" />
+      </div>
+    </div>
+    <ul v-if="!show">
+      <li v-for="tag of tags" :key="tag.slug">
+        <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
+          {{ tag.name }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    const tags = []
+    const show = true
+
+    return {
+      tags,
+      show,
+    }
+  },
+  async fetch() {
+    this.tags = await this.$content('tags')
+      .only(['name', 'description', 'img', 'slug'])
+      .fetch()
+  },
+  methods: {
+    open() {
+      this.show = !this.show
+    },
+  },
+}
+</script>
+<style scoped>
+.wrapper div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 1rem;
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+ul li {
+  margin: 0.5rem 0.5rem;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--black);
+}
+ul li a:hover {
+  text-decoration: line-through;;
+  
+}
+
+h1 {
+  position: relative;
+  float: left;
+  color: var(--black);
+  font-size: 2rem;
+}
+
+h1 span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background:var(--background-primary);
+  animation: escribir 5s steps(30);
+}
+
+@keyframes escribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@media (min-width: 640px) { 
+ .wrapper div {
+    margin: 0rem 0rem;
+  }
+ }
+</style>

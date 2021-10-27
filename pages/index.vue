@@ -1,8 +1,11 @@
 <template>
   <div>
-    <h1>Blog Posts</h1>
-    <ul>
-      <li v-for="article of articles" :key="article.slug">
+    <div class="wrapper">
+      <h1>Blog Posts</h1>
+      <ul>
+        <li v-for="article of articles" :key="article.slug">
+          <PostCard :article="article" />
+          <!--         
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
           <img :src="article.img" />
           <div>
@@ -10,32 +13,20 @@
             <p>by {{ article.author.name }}</p>
             <p>{{ article.description }}</p>
           </div>
-        </NuxtLink>
-      </li>
-    </ul>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
-    <ul class="flex flex-wrap mb-4 text-center">
-      <li
-        v-for="tag of tags"
-        :key="tag.slug"
-        class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
-      >
-        <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
-          <p
-            class="
-              font-bold
-              text-gray-600
-              uppercase
-              tracking-wider
-              font-medium
-              text-ss
-            "
-          >
-            {{ tag.name }}
-          </p>
-        </NuxtLink>
-      </li>
-    </ul>
+        </NuxtLink> -->
+        </li>
+      </ul>
+      <!-- <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
+      <ul>
+        <li v-for="tag of tags" :key="tag.slug">
+          <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
+            <p>
+              {{ tag.name }}
+            </p>
+          </NuxtLink>
+        </li>
+      </ul> -->
+    </div>
   </div>
 </template>
 
@@ -59,3 +50,10 @@ export default {
   },
 }
 </script>
+<style scoped>
+ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+</style>

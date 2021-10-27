@@ -1,7 +1,8 @@
 <template>
+<div>
   <article>
-    <AppSearchInput />
-    <nav>
+    <!-- <AppSearchInput /> -->
+    <!-- <nav>
       <ul>
         <li v-for="link of article.toc" :key="link.id">
           <NuxtLink
@@ -9,16 +10,18 @@
           </NuxtLink>
         </li>
       </ul>
-    </nav>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
+    </nav> -->
     <img :src="article.img" :alt="article.alt" />
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
-    <nuxt-content :document="article" />
-    <author :author="article.author" />
+    <div class="article">
+      <h1>{{ article.title }}</h1>
+      <p>{{ article.description }}</p>
+      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+      <nuxt-content :document="article" />
+    </div>
+    <!-- <author :author="article.author" /> -->
     <prev-next :prev="prev" :next="next" />
-    <pre> {{ article }} </pre>
   </article>
+</div>
 </template>
 <script>
 import getSiteMeta from  '../../utils/getSiteMeta';
@@ -93,6 +96,19 @@ head() {
 }
 </script>
 <style>
+img {
+  width: 100%;
+}
+.article {
+ margin: 1rem;
+ margin-bottom: 4rem;
+}
+@media (min-width: 640px) { 
+  .article {
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+}
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;

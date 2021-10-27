@@ -31,11 +31,20 @@ export default {
         rel: "canonical",
         href: process.env.BASE_URL,
       },
+    ],
+    script: [
+      {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3715249238838145",
+        async: true
+      }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    '@/assets/css/main.css',
+    '@/assets/css/normalize.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
