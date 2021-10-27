@@ -70,7 +70,7 @@ head() {
       {
         hid: "canonical",
         rel: "canonical",
-        href: `https://irvb.dev/blog/${this.$route.params.slug}`,
+        href: `https://irvb-dev-nachorv.vercel.app/blog/${this.$route.params.slug}`,
       },
     ],
   };
