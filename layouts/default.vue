@@ -4,6 +4,8 @@
     <main>
       <Nuxt />
     </main>
+    <gprd />
+    <myFooter />
   </div>
 </template>
 <style scoped>
