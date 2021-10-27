@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      Created with 💚 by IRVB follow me on
+      Created with 💚 by IRVB follow me on 👉 
 
       <a href="https://twitter.com/_irvb" target="_blank">
         <svg
