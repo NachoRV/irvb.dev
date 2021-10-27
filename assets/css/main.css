@@ -13,3 +13,11 @@ body {
   font-family: monospace; 
   background-color: var(--background-primary);
 }
+
+.img-entrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+}

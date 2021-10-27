@@ -58,7 +58,7 @@ head() {
         property: "article:tag",
         content: this.article.tags ? this.article.tags.toString() : "",
       },
-      { name: "twitter:label1", content: "Written by" },
+      { name: "twitter:label1", content: "irvb" },
       { name: "twitter:data1", content: "Bob Ross" },
       { name: "twitter:label2", content: "Filed under" },
       {
@@ -70,7 +70,7 @@ head() {
       {
         hid: "canonical",
         rel: "canonical",
-        href: `https://bobross.com/articles/${this.$route.params.slug}`,
+        href: `https://irvb.dev/blog/${this.$route.params.slug}`,
       },
     ],
   };

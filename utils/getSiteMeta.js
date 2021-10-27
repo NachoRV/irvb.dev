@@ -1,9 +1,9 @@
 const type = "website";
-const url = "https://bobross.com";
-const title = "My Amazing Blog on The Joy of Painting";
+const url = "https://irvb.dev";
+const title = "Blog sobre programacion y desarrollo web";
 const description =
-  "Articles focused on the beautiful art of landscape painting.";
-const mainImage = "/a-lovely-image.png";
+  "Blog sobre programación y desarrollo web en el que trataremos temas de CSS, CSS3, Doker, JavaScript nodejs Vue Vue3 Angular y Typescript";
+const mainImage = "/portada.png";
 
 export default (meta) => {
   return [
