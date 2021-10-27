@@ -37,6 +37,9 @@ export default (meta) => {
       property: "og:image",
       content: (meta && meta.mainImage) || mainImage,
     },
+    { name: 'twitter:site', content:  url},
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:creator', content: '@I_R_V_B' },
     {
       hid: "twitter:url",
       name: "twitter:url",

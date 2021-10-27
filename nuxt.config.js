@@ -25,7 +25,7 @@ export default {
       { name: "twitter:card", content: "summary_large_image" },
     ],
     link: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.ico" },
       {
         hid: "canonical",
         rel: "canonical",

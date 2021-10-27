@@ -58,24 +58,6 @@ export default {
           property: 'article:tag',
           content: this.article.tags ? this.article.tags.toString() : '',
         },
-        { name: 'twitter:site', content: this.$config.baseUrl },
-        { name: 'twitter:card', content: 'ssummary' },
-        { name: 'twitter:creator', content: '@I_R_V_B' },
-        {
-          hid: 'twitter:url',
-          name: 'twitter:url',
-          content: this.$config.baseUrl,
-        },
-        {
-          hid: 'twitter:title',
-          name: 'twitter:title',
-          content: this.article.title,
-        },
-        {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: this.article.description,
-        }
       ],
       link: [
         {
