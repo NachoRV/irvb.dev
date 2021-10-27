@@ -50,6 +50,51 @@ export default {
       tag,
     }
   },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        ...this.meta,
+        {
+          property: 'article:published_time',
+          content: this.article.createdAt,
+        },
+        {
+          property: 'article:modified_time',
+          content: this.article.updatedAt,
+        },
+        {
+          property: 'article:tag',
+          content: this.article.tags ? this.article.tags.toString() : '',
+        },
+        { name: 'twitter:site', content: this.$config.baseUrl },
+        { name: 'twitter:card', content: 'ssummary' },
+        { name: 'twitter:creator', content: '@I_R_V_B' },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: this.$config.baseUrl,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.description,
+        }
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
+        },
+      ],
+    }
+  },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
