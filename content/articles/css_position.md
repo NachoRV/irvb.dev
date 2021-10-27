@@ -9,7 +9,7 @@ author:
   bio: Para que nos conozcamos un poco mejor ... 
   img: /yo.jpg
 tags: 
-  - web development
+  - css
 date: '2020-01-02'
 ---
 

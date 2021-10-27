@@ -8,7 +8,8 @@ author:
   name: Nacho
   bio: Para que nos conozcamos un poco mejor ... 
   img: /yo.jpg
-tag: "Docker"
+tags: 
+  - Docker
 date: '2020-01-02'
 ---
 

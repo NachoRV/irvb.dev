@@ -9,7 +9,8 @@ author:
   name: Nacho
   bio: Para que nos conozcamos un poco mejor ... 
   img: /yo.jpg
-tag: "Otros"
+tags: 
+  - Otros
 date: '2020-01-02'
 ---
 
