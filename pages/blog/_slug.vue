@@ -94,6 +94,10 @@ export default {
       }
       return getSiteMeta(metaData)
     },
+    url() {
+      if (this.article) return `/blog/${this.article.slug}`
+      return this.$route.fullPath
+    },
   },
   methods: {
     formatDate(date) {
