@@ -114,11 +114,11 @@ img {
   margin-bottom: 20px;
 }
 
-.icon.icon-link {
+/* .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
   display: inline-block;
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
-}
+} */
 </style>
