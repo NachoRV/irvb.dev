@@ -1,34 +1,45 @@
 <template>
-  <div v-if="!acceptCookies" class="card ">
+  <div v-if="!acceptCookies" class="card">
     <p>
-      Utilizamos cookies propias y de terceros para mejorar la experiencia del usuario a través de su navegación. Si continúas navegando aceptas su uso.
+      Utilizamos cookies propias y de terceros para mejorar la experiencia del
+      usuario a través de su navegación. Si continúas navegando aceptas su uso.
     </p>
     <div class="div-btn">
-       <button @click="setCookie">[ Acepto ]</button>
+      <button @click="setCookie">[ Acepto ]</button>
     </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    const newCookie = 'CONSENT=Yes';
-    const acceptCookies = false;
+    const newCookie = 'CONSENT=Yes'
+    const acceptCookies = false
+
     return {
       newCookie,
-      acceptCookies
+      acceptCookies,
     }
   },
   beforeMount() {
+    if(this.getCookie('CONSENT')) this.acceptCookies = true
     const cookies = document.cookie
-    const arrayCookies = cookies.replace(/ /g, "").split(";");
-    this.acceptCookies = arrayCookies.includes(this.newCookie);
+    const arrayCookies = cookies.replace(/ /g, '').split(';')
+    this.acceptCookies = arrayCookies.includes(this.newCookie)
   },
   methods: {
     setCookie() {
       document.cookie = this.newCookie
       this.acceptCookies = true
+    },
+    getCookie(name) {
+      const matches = document.cookie.match(
+        new RegExp(
+          `(?:^|; )${name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1')}=([^;]*)`
+        )
+      )
+      return matches ? decodeURIComponent(matches[1]) : undefined
     }
-  }
+  },
 }
 </script>
 <style scoped>
@@ -45,7 +56,6 @@ export default {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
 }
 p {
   margin: 0;
@@ -57,5 +67,4 @@ button {
   border: none;
   cursor: pointer;
 }
-
 </style>
