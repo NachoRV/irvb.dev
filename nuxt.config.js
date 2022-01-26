@@ -10,18 +10,14 @@ export default {
     meta: [
       ...meta,
       { charset: "utf-8" },
-      { name: "HandheldFriendly", content: "True" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { property: "og:site_name", content: "Bob Ross" },
       {
         hid: "description",
         name: "description",
         content:
-          "Articles focused on the beautiful art of landscape painting.",
+          "Artículos sobre programación web, javascript, css, git, html",
       },
-      { property: "og:image:width", content: "740" },
-      { property: "og:image:height", content: "300" },
-      { name: "twitter:site", content: "@bobross" },
+      { name: "twitter:site", content: "@_irvb" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     link: [

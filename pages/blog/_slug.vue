@@ -45,25 +45,40 @@ export default {
     return {
       title: this.article.title,
       meta: [
-        ...this.meta,
         {
-          property: 'article:published_time',
-          content: this.article.createdAt,
+          hid: 'description',
+          content: this.article.description,
+          name: 'description',
         },
         {
-          property: 'article:modified_time',
-          content: this.article.updatedAt,
+          hid: 'og:title',
+          content: this.article.title,
+          property: 'og:title',
         },
         {
-          property: 'article:tag',
-          content: this.article.tags ? this.article.tags.toString() : '',
+          hid: 'og:description',
+          content: this.article.description,
+          property: 'og:description',
         },
-      ],
-      link: [
         {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
+          hid: 'og:url',
+          content: this.url,
+          property: 'og:url',
+        },
+        {
+          hid: 'twitter:title',
+          content: this.article.title,
+          name: 'twitter:title',
+        },
+        {
+          hid: 'twitter:description',
+          content: this.article.description,
+          name: 'twitter:description',
+        },
+        {
+          hid: 'og:type',
+          content: 'article',
+          property: 'og:type',
         },
       ],
     }

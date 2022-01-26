@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-      <img v-if="article.img.length > 1"  class="d-none" :src="article.img" />
+      <img v-show="article.img.length > 1"  class="d-none" :src="article.img"/>
       <div>
         <h3>{{ article.title }}</h3>
         <p>{{ article.description }}</p>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!acceptCookies" class="card">
+  <div v-show="!acceptCookies" class="card">
     <p>
       Utilizamos cookies propias y de terceros para mejorar la experiencia del
       usuario a través de su navegación. Si continúas navegando aceptas su uso.
@@ -28,8 +28,8 @@ export default {
   },
   methods: {
     setCookie() {
-      document.cookie = this.newCookie
       this.acceptCookies = true
+      document.cookie = this.newCookie
     },
     getCookie(name) {
       const matches = document.cookie.match(

@@ -1,6 +1,6 @@
 const type = "website";
 const url = "https://irvb.dev";
-const title = "Blog sobre programacion y desarrollo web";
+const title = "Blog sobre programación y desarrollo web";
 const description =
   "Blog sobre programación y desarrollo web en el que trataremos temas de CSS, CSS3, Doker, JavaScript nodejs Vue Vue3 Angular y Typescript";
 const mainImage = "/portada.png";
