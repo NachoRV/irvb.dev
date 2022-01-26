@@ -7,17 +7,29 @@
         </div>
       </NuxtLink>
       <div>
-        <img v-if="show" src="~assets/svg/menu.svg" alt="menu" @click="open" />
-        <img v-else src="~assets/svg/close.svg" alt="menu" @click="open" />
+        <img
+          v-show="show"
+          src="~assets/svg/menu.svg"
+          alt="menu"
+          @click="open"
+        />
+        <img
+          v-show="!show"
+          src="~assets/svg/close.svg"
+          alt="menu"
+          @click="open"
+        />
       </div>
     </div>
-    <ul v-if="!show">
-      <li v-for="tag of tags" :key="tag.slug">
-        <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
-          {{ tag.name }}
-        </NuxtLink>
-      </li>
-    </ul>
+    <client-only>
+      <ul v-show="!show">
+        <li v-for="tag of tags" :key="tag.slug">
+          <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
+            {{ tag.name }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </client-only>
   </div>
 </template>
 <script>
@@ -66,8 +78,7 @@ ul li a {
   color: var(--black);
 }
 ul li a:hover {
-  text-decoration: line-through;;
-  
+  text-decoration: line-through;
 }
 
 h1 {
@@ -81,7 +92,7 @@ h1 span {
   position: absolute;
   right: 0;
   width: 0;
-  background:var(--background-primary);
+  background: var(--background-primary);
   animation: escribir 5s steps(30);
 }
 
@@ -94,9 +105,9 @@ h1 span {
   }
 }
 
-@media (min-width: 640px) { 
- .wrapper div {
+@media (min-width: 640px) {
+  .wrapper div {
     margin: 0rem 0rem;
   }
- }
+}
 </style>

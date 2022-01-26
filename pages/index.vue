@@ -1,32 +1,13 @@
 <template>
-  <div>
-    <div class="wrapper">
-      <h1>Blog Posts</h1>
+  <div class="wrapper">
+    <h1>Blog Posts</h1>
+    <client-only>
       <ul>
         <li v-for="article of articles" :key="article.slug">
           <PostCard :article="article" />
-          <!--         
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <img :src="article.img" />
-          <div>
-            <h2>{{ article.title }}</h2>
-            <p>by {{ article.author.name }}</p>
-            <p>{{ article.description }}</p>
-          </div>
-        </NuxtLink> -->
         </li>
       </ul>
-      <!-- <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
-      <ul>
-        <li v-for="tag of tags" :key="tag.slug">
-          <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
-            <p>
-              {{ tag.name }}
-            </p>
-          </NuxtLink>
-        </li>
-      </ul> -->
-    </div>
+    </client-only>
   </div>
 </template>
 
