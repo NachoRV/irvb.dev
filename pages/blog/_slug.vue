@@ -82,7 +82,7 @@ export default {
         {
           hid: 'og:image:secure_url',
           property: 'og:image:secure_url',
-          content: this.image
+          content: this.article.img
         },
         {
           hid: 'og:image:alt',
