@@ -57,7 +57,7 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: this.article.image
+          content: this.article.img
         },
         {
           hid: 'twitter:image:alt',
@@ -77,7 +77,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.article.image
+          content: this.article.img
         },
         {
           hid: 'og:image:secure_url',
@@ -108,12 +108,15 @@ export default {
       return this.$route.fullPath
     },
   },
+  mounted() {
+    console.log(this.article)
+  },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     },
-  },
+  }
 }
 </script>
 <style>
