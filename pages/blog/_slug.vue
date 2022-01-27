@@ -41,46 +41,55 @@ export default {
       next,
     }
   },
-  head() {
+ head() {
     return {
-      title: this.article.title,
       meta: [
         {
-          hid: 'description',
-          content: this.article.description,
-          name: 'description',
-        },
-        {
-          hid: 'og:title',
-          content: this.article.title,
-          property: 'og:title',
-        },
-        {
-          hid: 'og:description',
-          content: this.article.description,
-          property: 'og:description',
-        },
-        {
-          hid: 'og:url',
-          content: this.url,
-          property: 'og:url',
-        },
-        {
           hid: 'twitter:title',
-          content: this.article.title,
           name: 'twitter:title',
+          content: this.article.title
         },
         {
           hid: 'twitter:description',
-          content: this.article.description,
           name: 'twitter:description',
+          content: this.article.description
         },
         {
-          hid: 'og:type',
-          content: 'article',
-          property: 'og:type',
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.article.image
         },
-      ],
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.article.title
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.article.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.article.image
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.image
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.article.title
+        }
+      ]
     }
   },
   computed: {
