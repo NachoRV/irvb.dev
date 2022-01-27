@@ -39,7 +39,7 @@ export default (meta) => {
     },
     { name: 'twitter:site', content:  url},
     { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:creator', content: '@I_R_V_B' },
+    { name: 'twitter:creator', content: '@_irvb' },
     {
       hid: "twitter:url",
       name: "twitter:url",

@@ -93,24 +93,24 @@ export default {
     }
   },
   computed: {
-    meta() {
-      const metaData = {
-        type: 'article',
-        title: this.article.title,
-        description: this.article.description,
-        url: `${this.$config.baseUrl}/articles/${this.$route.params.slug}`,
-        mainImage: this.article.img,
-      }
-      return getSiteMeta(metaData)
-    },
+    // meta() {
+    //   const metaData = {
+    //     type: 'article',
+    //     title: this.article.title,
+    //     description: this.article.description,
+    //     url: `${this.$config.baseUrl}/articles/${this.$route.params.slug}`,
+    //     mainImage: this.article.img,
+    //   }
+    //   return getSiteMeta(metaData)
+    // },
     url() {
       if (this.article) return `/blog/${this.article.slug}`
       return this.$route.fullPath
     },
   },
-  mounted() {
-    console.log(this.article)
-  },
+  // mounted() {
+  //   console.log(this.article)
+  // },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
