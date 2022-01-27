@@ -1,5 +1,5 @@
-import getSiteMeta from "./utils/getSiteMeta";
-const meta = getSiteMeta();
+// import getSiteMeta from "./utils/getSiteMeta";
+// const meta = getSiteMeta();
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -8,7 +8,7 @@ export default {
       lang: 'es',
     },
     meta: [
-      ...meta,
+      /// ...meta,
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
