@@ -9,7 +9,7 @@ author:
   img: /yo.jpg
 tags: 
   - GIT
-date: '2021-01-23'
+date: '2022-01-26'
 ---
 
 ## Iniciar repositorio 

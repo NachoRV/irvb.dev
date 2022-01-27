@@ -9,7 +9,7 @@ author:
   img: /yo.jpg
 tags: 
   - GIT
-date: '2021-01-26'
+date: '2022-01-27'
 ---
 
 Si este es tu primer contacto con git te recomiendo le des un vistazo a este **[post]**
