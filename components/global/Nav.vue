@@ -60,7 +60,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0rem 1rem;
+  margin: 0rem 1.5rem;
 }
 ul {
   display: flex;
@@ -69,9 +69,14 @@ ul {
   align-items: flex-end;
   justify-content: flex-end;
   margin-right: 1rem;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--background-primary);
+
 }
 ul li {
-  margin: 0.5rem 0.5rem;
+  margin: 0.5rem 1rem;
 }
 ul li a {
   text-decoration: none;
@@ -79,6 +84,7 @@ ul li a {
 }
 ul li a:hover {
   text-decoration: line-through;
+  font-weight: bold;
 }
 
 h1 {
@@ -107,7 +113,7 @@ h1 span {
 
 @media (min-width: 640px) {
   .wrapper div {
-    margin: 0rem 0rem;
+    margin: 0.5rem 0rem;
   }
 }
 </style>
