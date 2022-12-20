@@ -68,4 +68,7 @@ button {
   border: none;
   cursor: pointer;
 }
+button:hover {
+  font-weight: bold;
+}
 </style>
