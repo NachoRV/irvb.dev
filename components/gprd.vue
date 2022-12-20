@@ -50,6 +50,7 @@ export default {
   color: var(--white);
   padding: 1rem;
   max-width: 300px;
+  z-index: 9999;
 }
 .div-btn {
   margin-top: 1rem;
